@@ -7,11 +7,13 @@ const StyledFriend = styled.div`
     margin: 0 auto;
     margin-bottom: 10px;
     background-color: lightsteelblue;
+    box-shadow: 5px 5px gray;
 
     div {
         font-weight: bold;
         font-size: 15px;
         padding: 5px;
+        margin-left: 8px;
     }
 
     button {
@@ -19,6 +21,7 @@ const StyledFriend = styled.div`
         border-radius: 10px;
         padding: 8px;
         font-size: 15px;
+        margin-left: 130px;
     }
 `;
 const Friend = (props) => {

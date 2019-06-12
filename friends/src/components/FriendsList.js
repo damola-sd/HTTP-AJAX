@@ -2,9 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Friend from './Friend';
+import AddFriend from './AddFriend';
 
 const StyledFriendsList = styled.div`
     max-width: 800px;
+    position: relative;
+    
+`;
+const StyledAddFriend = styled.div`
+    width: 50%;
+    height: 500px;
     
 `;
 
@@ -41,6 +48,11 @@ export default class FriendsList extends React.Component {
                         <Friend key={friend.id} friend={friend}/>
                     ))
                 }
+                <StyledAddFriend>
+                    <AddFriend/>
+                </StyledAddFriend>
+
+                
             </StyledFriendsList>
 
         )
