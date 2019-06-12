@@ -1,11 +1,21 @@
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+const StyledAddFriend = styled.div`
+    width: 50%;
+    height: 500px;
+    float: right;
+    background-color: lightgray;
+    margin-top: 27px;
+    
+`;
+
 
 
 
 const AddFriend = () => {
     return (
-        <div>
+        <StyledAddFriend>
             <h2>Add Friend</h2>
             <form>
                 First Name:   
@@ -30,7 +40,7 @@ const AddFriend = () => {
                 />
                     
             </form>
-        </div>
+        </StyledAddFriend>
     )
         
 

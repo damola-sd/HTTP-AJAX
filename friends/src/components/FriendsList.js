@@ -9,14 +9,6 @@ const StyledFriendsList = styled.div`
     margin: 0 auto;
     
 `;
-const StyledAddFriend = styled.div`
-    width: 50%;
-    height: 500px;
-    float: right;
-    background-color: lightgray;
-    margin-top: 27px;
-    
-`;
 
 export default class FriendsList extends React.Component {
     state = {
@@ -28,14 +20,14 @@ export default class FriendsList extends React.Component {
     getFriends = () => {
         axios.get('http://localhost:5000/friends')
             .then(response => {
-                
+
                 this.setState({ friends: response.data });
             })
-            .catch (error => {
+            .catch(error => {
                 this.setState({ errorMessage: error.message });
             })
             .finally(() => {
-                
+
             });
     }
 
@@ -45,18 +37,16 @@ export default class FriendsList extends React.Component {
 
     render() {
         return (
-            <StyledFriendsList>x
-                <StyledAddFriend>
-                    <AddFriend/>
-                </StyledAddFriend>
+            <StyledFriendsList>
+                <AddFriend />
                 {
                     this.state.friends.map(friend => (
-                        <Friend key={friend.id} friend={friend}/>
+                        <Friend key={friend.id} friend={friend} />
                     ))
                 }
-                
 
-                
+
+
             </StyledFriendsList>
 
         )
