@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const StyledFriend = styled.div`
     height: 150px;
-    width: 50%;
-    margin: 0 auto;
+    width: 48%;
     margin-bottom: 10px;
     background-color: lightsteelblue;
     box-shadow: 5px 5px gray;
@@ -22,6 +21,7 @@ const StyledFriend = styled.div`
         padding: 8px;
         font-size: 15px;
         margin-left: 130px;
+        cursor: pointer;
     }
 `;
 const Friend = (props) => {

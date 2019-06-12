@@ -6,12 +6,15 @@ import AddFriend from './AddFriend';
 
 const StyledFriendsList = styled.div`
     max-width: 800px;
-    position: relative;
+    margin: 0 auto;
     
 `;
 const StyledAddFriend = styled.div`
     width: 50%;
     height: 500px;
+    float: right;
+    background-color: lightgray;
+    margin-top: 27px;
     
 `;
 
@@ -42,15 +45,16 @@ export default class FriendsList extends React.Component {
 
     render() {
         return (
-            <StyledFriendsList>
+            <StyledFriendsList>x
+                <StyledAddFriend>
+                    <AddFriend/>
+                </StyledAddFriend>
                 {
                     this.state.friends.map(friend => (
                         <Friend key={friend.id} friend={friend}/>
                     ))
                 }
-                <StyledAddFriend>
-                    <AddFriend/>
-                </StyledAddFriend>
+                
 
                 
             </StyledFriendsList>
