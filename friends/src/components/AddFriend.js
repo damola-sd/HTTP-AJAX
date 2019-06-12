@@ -6,8 +6,25 @@ const StyledAddFriend = styled.div`
     height: 500px;
     float: right;
     background-color: lightgray;
-    margin-top: 27px;
     
+    h2 {
+      margin-left: 10px;
+    }
+    form {
+      margin-left: 15px;
+
+      input {
+        margin: 10px;
+      }
+
+      .submit {
+        padding: 10px;
+        font-size: 15px;
+        background-color: orange;
+        margin-left: 35%;
+      }
+    }
+
 `;
 
 
@@ -31,11 +48,13 @@ const AddFriend = () => {
                 /><br></br>
                 Email:  
                 <input
+                  placeholder = 'Enter E-mail'
                   type = 'email'
                   name = 'email'
                 /><br></br>
 
                 <input
+                  className = 'submit'
                   type = 'submit'
                 />
                     
