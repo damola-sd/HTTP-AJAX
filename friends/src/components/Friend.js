@@ -2,7 +2,7 @@ import React from'react';
 import styled from 'styled-components';
 
 const StyledFriend = styled.div`
-    height: 150px;
+    height: 180px;
     width: 48%;
     margin-bottom: 10px;
     background-color: lightsteelblue;
@@ -31,6 +31,7 @@ const Friend = (props) => {
             <div>Age: {props.friend.age}</div>
             <div>Email: {props.friend.email}</div>
 
+            <button>Update</button>
             <button>Delete</button>
         </StyledFriend>
     )

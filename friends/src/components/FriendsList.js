@@ -9,6 +9,7 @@ const StyledFriendsList = styled.div`
     margin: 0 auto;
     
 `;
+const friendServerUrl = 'http://localhost:5000/friends';
 
 export default class FriendsList extends React.Component {
     state = {
@@ -16,9 +17,9 @@ export default class FriendsList extends React.Component {
         errorMessage: '',
 
     }
-
+    
     getFriends = () => {
-        axios.get('http://localhost:5000/friends')
+        axios.get(friendServerUrl)
             .then(response => {
 
                 this.setState({ friends: response.data });
@@ -30,6 +31,8 @@ export default class FriendsList extends React.Component {
 
             });
     }
+
+
 
     componentDidMount() {
         this.getFriends();
