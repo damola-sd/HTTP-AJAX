@@ -33,8 +33,17 @@ export default class FriendsList extends React.Component {
             });
     }
 
+    deleteFriend = (id) => {
+        axios.delete(`${friendServerUrl}/${id}`)
+            .then(() => this.componentDidUpdate);
+    }
+
 
     componentDidMount() {
+        this.getFriends();
+    }
+
+    componentDidUpdate() {
         this.getFriends();
     }
 
@@ -45,7 +54,7 @@ export default class FriendsList extends React.Component {
 
                 {
                     this.state.friends.map(friend => (
-                        <Friend key={friend.id} friend={friend} />
+                        <Friend key={friend.id} friend={friend} delete = {this.deleteFriend} />
                     ))
                 }
 

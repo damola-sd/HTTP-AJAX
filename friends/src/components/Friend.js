@@ -33,10 +33,12 @@ const Friend = (props) => {
             <div>Email: {props.friend.email}</div>
 
             {/* <button>Update</button> */}
-            <button>Delete</button>
+            <button
+              onClick = {() => props.delete(props.friend.id)}>Delete</button>
         </StyledFriend>
     )
    
 }
+
 
 export default Friend;
