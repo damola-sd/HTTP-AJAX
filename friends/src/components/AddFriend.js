@@ -34,11 +34,11 @@ const friendServerUrl = 'http://localhost:5000/friends';
 
 class AddFriend extends React.Component {
 
-  state = {
-    name: '',
-    age: '',
-    email: ''
-  }
+  // state = {
+  //   name: '',
+  //   age: '',
+  //   email: ''
+  // }
 
   nameInput = React.createRef();
   ageInput = React.createRef();

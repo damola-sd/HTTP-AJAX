@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Friend from './Friend';
 import AddFriend from './AddFriend';
+import UpdateFriend from './UpdateFriend';
 
 const StyledFriendsList = styled.div`
     max-width: 800px;
@@ -17,7 +18,7 @@ export default class FriendsList extends React.Component {
         errorMessage: '',
 
     }
-    
+
     getFriends = () => {
         axios.get(friendServerUrl)
             .then(response => {
@@ -33,7 +34,6 @@ export default class FriendsList extends React.Component {
     }
 
 
-
     componentDidMount() {
         this.getFriends();
     }
@@ -42,6 +42,7 @@ export default class FriendsList extends React.Component {
         return (
             <StyledFriendsList>
                 <AddFriend />
+
                 {
                     this.state.friends.map(friend => (
                         <Friend key={friend.id} friend={friend} />
@@ -49,7 +50,7 @@ export default class FriendsList extends React.Component {
                 }
 
 
-
+                <UpdateFriend />
             </StyledFriendsList>
 
         )

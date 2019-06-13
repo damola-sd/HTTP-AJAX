@@ -27,11 +27,12 @@ const StyledFriend = styled.div`
 const Friend = (props) => {
     return (
         <StyledFriend>
+            <div>Id: {props.friend.id}</div>
             <div>Name: {props.friend.name}</div>
             <div>Age: {props.friend.age}</div>
             <div>Email: {props.friend.email}</div>
 
-            <button>Update</button>
+            {/* <button>Update</button> */}
             <button>Delete</button>
         </StyledFriend>
     )
